@@ -7,12 +7,14 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #202020;
 }
 
 /*Contenedor del banner*/
 #banner{
     position: relative;
-    height: 450px;
+    height: 350px;
     overflow: hidden;
 }
 
@@ -43,4 +45,94 @@ nav a{
     color: white;
     text-decoration: none;
     font-family: Arial, sans-serif;
+}
+
+/*Destaco la página en la que estoy navegando*/
+nav a.activo{
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    padding-bottom: 4px;
+}
+
+/*Botón empezar, para acceder a la pagina de destinos*/
+.boton-empezar{
+    display: inline-block;
+    background-color:#69ccc4 ;
+    color:white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: Arial,sans-serif;
+
+}
+/*presentación principal del sitio*/
+.presentacion{
+    text-align: center;
+    padding: 30px 20px;
+}
+/*Contenedor del carrusel de destinos turísticos*/
+#carrusel{
+    text-align: center;
+    padding: 30px 15px;
+}
+
+
+/*Fotografias y flechas*/
+.contenedor-carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/*Foto principal del carrusel*/
+#imagen-carrusel{
+    width: 100%;
+    max-width: 850px;
+    height: 400px;
+    object-fit: cover;
+   border-radius: 10px; 
+   min-width: 0;
+}
+
+/*botones para cambiar las fotos*/
+.contenedor-carrusel button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+/*tamaño de las imagenes de la flechas*/
+.contenedor-carrusel button img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+/*Adapto el diseño a pantallas pequeñas*/
+@media (max-width: 600px){
+
+    nav ul{
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    #imagen-carrusel{
+        height: 260px;
+    }
+
+    .contenedor-carrusel{
+        gap: 8px;
+    }
+
+    .contenedor-carrusel button img{
+        width: 30px;
+        height: 30px;
+    }
+
+    #banner{
+        height: 350px;
+    }
 }

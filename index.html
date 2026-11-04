@@ -14,7 +14,7 @@
             <!--marco la pagina, para diferenciarla en el menu.--> 
             <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
             <li><a href="destinos.html">Destinos</a></li>
-            <li><a href="contacto.html">contacto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 
@@ -27,24 +27,44 @@
         </section>
 
         <!--presentación-->
-        <section>
+        <section class="presentacion">
+
             <!--Encabezado de mi página principal-->
             <header>
             <h1>Bienvenidos a la guía turística: "Explorando San Luis"</h1>
 
-            <p>Descubrí los paisajes y destinos de nuestra provincia.</p>
+            <p>Descubrí la naturaleza, los paisajes y destinos turísticos de nuestra provincia.</p>
             </header>
 
             <h2>Conocé San Luis</h2>
-
             <p>San Luis es una provincia argentina que se destaca por sus
             sierras, paisajes naturales y atractivos turísticos.
             Te invitamos a descubrir algunos de sus destinos más hermosos.</p>
+
+            <!--enlace para explorar los destinos turísticos-->
+            <a href="destinos.html" class="boton-empezar">Empezar</a>
         </section>
 
         <!--Carrusel de imagenes de los destinos turísticos.-->
         <section id="carrusel">
             <h2>Descubrí nuestros paisajes</h2>
+            
+            <div class="contenedor-carrusel">
+
+                <!--Botón para retroceder-->
+                <button id="anterior" type="button" aria-label="Ver fotografía anterior">
+                    <img src="img/izquierda.png" alt="Anterior">
+                </button>
+
+                <!--imagenes de paisajes que voy a mostrar en el carrusel-->
+                <img id="imagen-carrusel" src="img/PotrerodelosFunes.JPG" alt="Paisaje de San Luis">
+ 
+                <!---Botón para avanzar-->
+                <button id="siguiente" type="button" aria-label="Ver fotografía siguiente">
+                    <img src="img/derecha.png" alt="Siguiente">
+                </button>
+            
+            </div>
 
         </section>
 
