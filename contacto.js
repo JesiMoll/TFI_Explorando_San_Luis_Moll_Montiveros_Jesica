@@ -6,7 +6,7 @@ const resultado = document.getElementById("resultado-contacto");
 //Envío el formulario con el evento.
 formulario.addEventListener("submit", function(evento) {
 
-    //Evito que la página se recargue.
+    //Evito que la página se me recargue.
     evento.preventDefault();
 
     //Obtengo los datos y elimino espacios sobrantes.
