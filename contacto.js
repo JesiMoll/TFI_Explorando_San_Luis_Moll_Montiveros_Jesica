@@ -69,7 +69,7 @@ formulario.addEventListener("submit", function(evento) {
 
     //Creo elementos HTML para mostrar los datos ingresados.
     const titulo = document.createElement("h2");
-    titulo.textContent = "Consulta registrada correctamente";
+    titulo.textContent = "Consulta enviada correctamente";
 
     const datosNombre = document.createElement("p");
     datosNombre.textContent = "Nombre: " + nombre;
