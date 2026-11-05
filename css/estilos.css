@@ -11,6 +11,31 @@ body{
     color: #202020;
 }
 
+/* Estilo del título principal de mi sitio */
+h1 {
+    font-size: 32px;
+    color: #205b56;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Estilo de los títulos de las secciones */
+h2 {
+    font-size: 25px;
+    color: #287b73;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #303030;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
 /*Contenedor del banner*/
 #banner{
     position: relative;
@@ -68,12 +93,20 @@ nav a.activo{
 /*presentación principal del sitio*/
 .presentacion{
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px 20px 10px;
 }
+
+/*Limito el ancho de los párrafos de mi presentación*/
+.presentacion p {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*Contenedor del carrusel de destinos turísticos*/
 #carrusel{
     text-align: center;
-    padding: 30px 15px;
+    padding: 10px 15px 30px;
 }
 
 
@@ -134,5 +167,18 @@ nav a.activo{
 
     #banner{
         height: 350px;
+    }
+
+        /* Ajusto los textos para pantallas pequeñas */
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
     }
 }

@@ -6,6 +6,16 @@ const imagenes = [
     "img/Imagen4.jpg",
     "img/Sierras Comechingones.jpg"
 ];
+
+//Describo cada imagen del banner para mejorar la accesibilidad.
+const descripcionesBanner = [
+    "Mujer fotografiando las sierras de San Luis",
+    "Paisaje turístico de San Luis",
+    "Paisaje natural de San Luis",
+    "Paisaje de las sierras de San Luis",
+    "Sierras de los Comechingones"
+];
+
 //imagen con que comienza el banner.
 let indice = 0;
 //busco en html la imagen que voy a cambiar.
@@ -18,7 +28,7 @@ function cambiarImagen(){
     }
 
     imagenBanner.src = imagenes[indice];
-    imagenBanner.alt = "Fotografía turística de San Luis";
+    imagenBanner.alt = descripcionesBanner[indice];
 }
 //cambio la imagen cada 4 segundos.
 setInterval(cambiarImagen, 4000);
