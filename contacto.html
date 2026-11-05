@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Alt GR +1 linea vertical-->
+    <title>Explorando San Luis | Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--Menú de navegación-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="contacto.html" class="activo" aria-current="page">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="seccion-contacto">
+            <h1>Contactanos</h1>
+            <p>¿Querés conocer más sobre San Luis? Dejanos tu consulta.</p>
+
+            <!--Creo mi formulario de contacto-->
+            <form id="formulario-contacto" novalidate>
+
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre completo:</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        maxlength="50" 
+                        required
+                    >
+                    <small id="error-nombre" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo electrónico:</label>
+                    <input 
+                        type="email" 
+                        id="correo" 
+                        required
+                    >
+                    <small id="error-correo" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="telefono">Teléfono:</label>
+                    <input 
+                        type="tel" 
+                        id="telefono" 
+                        required
+                    >
+                    <small id="error-telefono" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensaje">Tu consulta:</label>
+                    <textarea id="mensaje" rows="5" maxlength="500" required></textarea>
+                    <small id="error-mensaje" class="mensaje-error"></small>
+                </div>
+
+                <button type="submit" class="boton-enviar">Enviar consulta</button>
+
+            </form>
+
+            <!--Muestro los datos cuando sean válidos-->
+            <div id="resultado-contacto" class="resultado-contacto"></div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Explorando San Luis ©JesiMoll 2026</p>
+        <p>Programación Web I</p>
+    </footer>
+
+    <script src="contacto.js"></script>
+</body>
+</html>
