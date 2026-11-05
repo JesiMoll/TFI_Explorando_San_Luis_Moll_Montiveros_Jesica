@@ -144,6 +144,128 @@ nav a.activo{
     height: 40px;
     object-fit: contain;
 }
+
+
+/* Presentación de mi página de destinos */
+.seccion-destinos {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Distribuyo los destinos en columnas con Flexbox */
+.lista-destinos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Diseño las tarjetas de los destinos */
+.tarjeta-destino {
+    flex: 1 1 280px;
+    max-width: 370px;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+/* Ajusto las fotografías de los destinos */
+.tarjeta-destino img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilo de los enlaces a Google Maps */
+.enlace-mapa {
+    display: inline-block;
+    background-color: #69ccc4;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+footer p {
+    color: white;
+}
+
+
+/* Diseño mi página de contacto */
+.seccion-contacto {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Diseño el formulario */
+#formulario-contacto {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+/* Organizo los campos del formulario */
+.campo-formulario {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Etiquetas de los campos */
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Cajas donde se escriben los datos */
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/* Mensajes de error */
+.mensaje-error {
+    display: block;
+    color: #a21e30;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Botón de envío */
+.boton-enviar {
+    background-color: #69ccc4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+/* Resultado del formulario */
+.resultado-contacto {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+
 /*Adapto el diseño a pantallas pequeñas*/
 @media (max-width: 600px){
 
