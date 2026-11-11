@@ -26,15 +26,18 @@ formulario.addEventListener("submit", function(evento) {
     //Supongo que el formulario es válido hasta encontrar un error.
     let valido = true;
 
-    //Verifico que el nombre tenga entre 2 y 50 caracteres.
-    if (nombre.length < 2 || nombre.length > 50) {
+    //Verifico la cantidad de caracteres y que el nombre tenga solo letras.
+    const expresionNombre = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ ]+$/;
+
+    //Verifico que el nombre tenga entre 2 y 50 caracteres .
+    if (nombre.length < 2 || nombre.length > 50 || !expresionNombre.test(nombre)) {
         document.getElementById("error-nombre").textContent =
-            "Ingresá un nombre de entre 2 y 50 caracteres.";
+            "Ingresá un nombre válido de 2 y 50 caracteres, usando letras y espacios.";
         valido = false;
     }
 
     //Verifico el formato del correo.
-    const expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const expresionCorreo = /^[a-zA-Z0-9]+([._%+-][a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,}$/;
 
     if (!expresionCorreo.test(correo)) {
         document.getElementById("error-correo").textContent =
@@ -43,7 +46,7 @@ formulario.addEventListener("submit", function(evento) {
     }
 
     //Verifico los caracteres permitidos en el teléfono.
-    const expresionTelefono = /^\+?[0-9\s()-]+$/;
+    const expresionTelefono = /^\+?[0-9]+([ -][0-9]+)*$/;
     const soloNumeros = telefono.replace(/\D/g, "");
 
     if (!expresionTelefono.test(telefono) ||
@@ -69,7 +72,7 @@ formulario.addEventListener("submit", function(evento) {
 
     //Creo elementos HTML para mostrar los datos ingresados.
     const titulo = document.createElement("h2");
-    titulo.textContent = "Consulta enviada correctamente";
+    titulo.textContent = "Datos ingresados correctamente";
 
     const datosNombre = document.createElement("p");
     datosNombre.textContent = "Nombre: " + nombre;
